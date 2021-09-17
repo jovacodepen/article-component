@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;600&display=swap");
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Manrope', sans-serif;
+  background: #ECF2F8;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.article-wrapper {
+  background: white;
+  border-radius: 20px;
+  margin: 0px 100px;
+}
+
+@media screen and (max-width: 500px) {
+  .article-wrapper {
+    margin: 0px;
+  }
+}
+
+.article-wrapper .article-image {
+  background: url("/dist/img/drawers.jpg");
+  background-position: center;
+  background-size: cover;
+  margin: 0px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .article-wrapper .article-image {
+    height: 200px;
+    width: 100%;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 20px;
+  }
+}
+
+.article-wrapper .article-copy {
+  padding: 40px;
+}
+
+.article-wrapper .article-copy .article-header {
+  font-size: 1.5em;
+  color: #48556A;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 500px) {
+  .article-wrapper .article-copy .article-header {
+    font-size: 1.2em;
+  }
+}
+
+.article-wrapper .article-copy-body {
+  font-weight: 200;
+  color: #6E8098;
+}
+
+@media screen and (max-width: 500px) {
+  .article-wrapper .article-copy-body {
+    font-size: 0.9em;
+  }
+}
+
+.article-wrapper .share-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.article-wrapper .share-container .avatar-img {
+  height: 60px;
+  border-radius: 100px;
+}
+
+.article-wrapper .share-container .avatar-info {
+  padding-left: 10px;
+}
+
+.article-wrapper .share-container .avatar-info-header {
+  font-size: 1em;
+  font-weight: 600;
+  color: #48556A;
+  margin: 0px;
+}
+
+.article-wrapper .share-container .avatar-info-date {
+  font-weight: 200;
+  color: #6E8098;
+  margin: 0px;
+}
+
+.article-wrapper .share-container .avatar-share {
+  background: #ECF2F8;
+  border-radius: 100px;
+  padding: 10px;
+  margin-left: auto;
+  color: #6E8098;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.article-wrapper .share-container .avatar-share:hover {
+  cursor: pointer;
+  background: #6E8098;
+  color: white;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.article-wrapper .share-container .avatar-share:hover + .share-bar {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.article-wrapper .share-container .share-bar {
+  height: 50px;
+  width: 250px;
+  padding: 5px 10px;
+  background: #48556A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  right: -106px;
+  top: -60px;
+  border: transparent;
+  border-radius: 10px;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.article-wrapper .share-container .share-bar:after {
+  content: '';
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 21px solid transparent;
+  border-top-color: #48556A;
+  border-bottom: 0;
+  margin-left: -21px;
+  margin-bottom: -21px;
+}
+
+.article-wrapper .share-container .share-bar #share {
+  color: #9DAEC2;
+  letter-spacing: 4px;
+  font-weight: 200;
+}
+
+.article-wrapper .share-container .share-bar ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.article-wrapper .share-container .share-bar ul li {
+  padding: 0px 5px;
+  color: white;
+  margin: 0px;
+}
+
+.article-wrapper .share-container .share-bar ul li #share {
+  color: #9DAEC2;
+}
