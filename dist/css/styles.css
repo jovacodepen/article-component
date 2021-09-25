@@ -32,7 +32,7 @@ main {
 }
 
 .article-wrapper .article-image {
-  background: url("../dist/img/drawers.jpg");
+  background: url("../img/drawers.jpg");
   background-position: center;
   background-size: cover;
   margin: 0px;
