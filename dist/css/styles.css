@@ -22,6 +22,7 @@ main {
   background: white;
   border-radius: 20px;
   margin: 0px 100px;
+  position: relative;
 }
 
 @media screen and (max-width: 500px) {
@@ -50,6 +51,12 @@ main {
 
 .article-wrapper .article-copy {
   padding: 40px;
+}
+
+@media screen and (max-width: 500px) {
+  .article-wrapper .article-copy {
+    padding: 40px 40px 20px 40px;
+  }
 }
 
 .article-wrapper .article-copy .article-header {
@@ -83,6 +90,16 @@ main {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 450px) {
+  .article-wrapper .share-container {
+    width: 100%;
+    margin-top: 50px;
+    bottom: 0;
+  }
 }
 
 .article-wrapper .share-container .avatar-img {
@@ -115,6 +132,15 @@ main {
   color: #6E8098;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  z-index: 1;
+}
+
+@media screen and (max-width: 500px) {
+  .article-wrapper .share-container .avatar-share {
+    margin-top: 16px;
+    font-size: 1em;
+    padding: 8px;
+  }
 }
 
 .article-wrapper .share-container .avatar-share:hover {
@@ -125,13 +151,7 @@ main {
   transition: all 0.3s ease;
 }
 
-.article-wrapper .share-container .avatar-share:hover + .share-bar {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  opacity: 1;
-}
-
-.article-wrapper .share-container .share-bar {
+.article-wrapper .share-bar {
   height: 50px;
   width: 250px;
   padding: 5px 10px;
@@ -146,8 +166,8 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  right: -106px;
-  top: -60px;
+  right: -22px;
+  bottom: 110px;
   border: transparent;
   border-radius: 10px;
   opacity: 0;
@@ -155,7 +175,22 @@ main {
   transition: all 0.3s ease;
 }
 
-.article-wrapper .share-container .share-bar:after {
+@media screen and (max-width: 450px) {
+  .article-wrapper .share-bar {
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    height: 15%;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 10px 20px;
+  }
+}
+
+.article-wrapper .share-bar:after {
   content: '';
   position: absolute;
   bottom: 10px;
@@ -167,15 +202,23 @@ main {
   border-bottom: 0;
   margin-left: -21px;
   margin-bottom: -21px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.article-wrapper .share-container .share-bar #share {
+@media screen and (max-width: 450px) {
+  .article-wrapper .share-bar:after {
+    display: none;
+  }
+}
+
+.article-wrapper .share-bar #share {
   color: #9DAEC2;
   letter-spacing: 4px;
   font-weight: 200;
 }
 
-.article-wrapper .share-container .share-bar ul {
+.article-wrapper .share-bar ul {
   list-style: none;
   margin: 0px;
   padding: 0px;
@@ -190,12 +233,23 @@ main {
           justify-content: center;
 }
 
-.article-wrapper .share-container .share-bar ul li {
+.article-wrapper .share-bar ul li {
   padding: 0px 5px;
   color: white;
   margin: 0px;
 }
 
-.article-wrapper .share-container .share-bar ul li #share {
+@media screen and (max-width: 500px) {
+  .article-wrapper .share-bar ul li {
+    font-size: 1.5em;
+    margin: 0px 5px;
+  }
+}
+
+.article-wrapper .share-bar ul li #share {
   color: #9DAEC2;
+}
+
+.article-wrapper .share-bar ul li:hover {
+  cursor: pointer;
 }
