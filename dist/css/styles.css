@@ -32,7 +32,7 @@ main {
 }
 
 .article-wrapper .article-image {
-  background: url("../dist/img/drawers.jpg");
+  background: url("./dist/img/drawers.jpg");
   background-position: center;
   background-size: cover;
   margin: 0px;
@@ -166,7 +166,7 @@ main {
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
-  right: -50px;
+  right: -150px;
   bottom: 110px;
   border: transparent;
   border-radius: 10px;
